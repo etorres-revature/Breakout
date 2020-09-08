@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breakout</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="#" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>BREAKOUT!!</h1>
+
+    <button id="rules-btn" class="btn rules-btn">Show dem RULEZ</button>
+    <div id="rules" class="rules">
+      <h2>How to Play the Game:</h2>
+      <p>
+        Use your left and right keys to moove the paddle to bounce the ball up
+        and break the blocks
+      </p>
+      <p>Each block that your break will add one to your score.</p>
+      <p>If you miss the ball, your score and the blocks will reset.</p>
+
+      <button id="close-btn" class="btn">Close the rules</button>
+
+      <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
