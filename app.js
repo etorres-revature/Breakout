@@ -7,6 +7,8 @@ const rulesEl = document.querySelector("#rules");
 const canvasEl = document.querySelector("#canvas");
 const ctx = canvas.getContext("2d");
 
+let score = 0;
+
 //create ball properties
 const ball = {
   x: canvasEl.width / 2,
@@ -45,8 +47,20 @@ function drawPaddle() {
   ctx.closePath();
 }
 
-drawBall();
-drawPaddle();
+//draw score on canvas
+function drawScore() {
+    ctx.font = "20px Arial";
+    ctx.fillText(`Score: ${score}`, canvas.width - 100, 30);
+}
+
+//draw everything
+function draw() {
+    drawBall();
+    drawPaddle();
+    drawScore();
+}
+
+draw();
 
 //rules and close event handlers
 rulesBtn.addEventListener("click", () => rulesEl.classList.add("show"));
