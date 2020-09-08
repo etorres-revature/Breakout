@@ -92,8 +92,8 @@ function drawBricks() {
 
 //draw everything
 function draw() {
-    //clear canvas
-    ctx.clearRect(0,0, canvas.width, canvas.height);
+  //clear canvas
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawBall();
   drawPaddle();
   drawScore();
@@ -114,9 +114,26 @@ function movePaddle() {
   }
 }
 
+//move ball on canvas
+function moveBall() {
+  ball.x += ball.dx;
+  ball.y += ball.dy;
+
+  //wall collision (x/right or left)
+  if (ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
+    ball.dx *= -1;
+  }
+
+  //wall collision(y/top or bottom)
+  if (ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
+    ball.dy *= -1;
+  }
+}
+
 //update canvas drawing and animation
 function update() {
   movePaddle();
+  moveBall();
   //draw everything
   draw();
 
@@ -127,20 +144,25 @@ update();
 
 //keydown event function
 function keyDown(e) {
-//   console.log(1);
-//console.log(e.key);
-if (e.key === "Right" || e.key === "ArrowRight"){
+  //   console.log(1);
+  //console.log(e.key);
+  if (e.key === "Right" || e.key === "ArrowRight") {
     paddle.dx = paddle.speed;
-} else if (e.key === "Left" || e.key === "ArrowLeft") {
+  } else if (e.key === "Left" || e.key === "ArrowLeft") {
     paddle.dx = -paddle.speed;
-}
+  }
 }
 //keyup event function
 function keyUp(e) {
-//   console.log(2);
-if(e.key ==="Right" || e.key === "ArrowRight" || e.key === "Left" || e.key === "ArrowLeft") {
-paddle.dx = 0;
-} 
+  //   console.log(2);
+  if (
+    e.key === "Right" ||
+    e.key === "ArrowRight" ||
+    e.key === "Left" ||
+    e.key === "ArrowLeft"
+  ) {
+    paddle.dx = 0;
+  }
 }
 
 //keyboard event handlers to move paddle
