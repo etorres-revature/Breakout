@@ -148,11 +148,35 @@ function moveBall() {
           ball.y + ball.size > brick.y && //top brick side check
           ball.y - ball.size < brick.y + brick.h //bottom brick side check
         ) {
-            ball.dy *= -1;
-            brick.visible = false;
+          ball.dy *= -1;
+          brick.visible = false;
+
+          increaseScore();
         }
       }
     });
+  });
+
+  //hit bottom wall - lose
+  if(ball.y + ball.size > canvas.height) {
+      showAllBricks();
+      score = 0;
+  }
+}
+
+//function to increase the score
+function increaseScore() {
+  score++;
+
+  if (score % (brickRows * brickRows) === 0) {
+    showAllBricks();
+  }
+}
+
+//make all bricks appea
+function showAllBricks() {
+  bricks.forEach((column) => {
+    column.forEach((brick) => (brick.visible = true));
   });
 }
 
