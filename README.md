@@ -8,11 +8,11 @@ Originally, the [Breakout arcade game](https://en.wikipedia.org/wiki/Breakout_(v
 
 This [Breakout](https://etorres-revature.github.io/Breakout/) was designed and developed using HTML5, CSS and JavaScript.  The main game space is an HTML5 canvas element.  The paddle, ball, and bricks are dynamically displayed on the screen using JavaScript.  The physics of the game (paddle interaction with ball; brick interaction with ball; and ball interaction with walls) is also created through dynamic JavaScript and HTML5 canvas element methods and properties.  
 
-![BREAKOUT game play](./assets/images/screenshots/break-out-game-play.png)
+![BREAKOUT game play](./assets/images/screenshots/breakout-game-play.png)
 
 There is a button to display the "RULEZ" and another button that takes them off the screen (both use CSS).
 
-![BREAKOUT game rules](./assets/images/screenshots/break-out-game-rules.png)
+![BREAKOUT game rules](./assets/images/screenshots/breakout-game-rules.png)
 
 The Score is displaed in the top right of the canvas.  The score goes up by 1 whenver the ball eliminates a brick.  When all bricks are destroyed or the ball hits the bottom wall then all bricks are displayed, and the game begins again.
 
