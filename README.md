@@ -16,7 +16,7 @@ There is a button to display the "RULEZ" and another button that takes them off 
 
 The Score is displaed in the top right of the canvas.  The score goes up by 1 whenver the ball eliminates a brick.  When all bricks are destroyed or the ball hits the bottom wall then all bricks are displayed, and the game begins again.
 
-Please enjoy the [Breakout](https://etorres-revature.github.io/Breakout/).  E-mail me with any feature update suggestions.
+Please enjoy [Breakout](https://etorres-revature.github.io/Breakout/).  E-mail me with any feature update suggestions.
 
 ### :computer: Technologies Used :computer:
 
